@@ -15,11 +15,8 @@ def search1(a):
         'Connection': "keep-alive",
         'Referer': "https://app.arabypros.com/",
     }
-    proxies = {
-        "http": "37.224.26.97:3128",
-    }
     try:
-        response = requests.get(url, headers=headers,proxies=proxies, verify=False)
+        response = requests.get(url, headers=headers, verify=False)
         response.raise_for_status()  # Raise an exception for HTTP errors
         return response.json()
     except requests.exceptions.RequestException as e:
@@ -37,11 +34,8 @@ def search2(a):
         'Referer': "https://app.arabypros.com/",
         'if-modified-since': "Mon, 23 Dec 2024 21:42:48 GMT",
     }
-    proxies = {
-        "http": "37.224.26.97:3128",
-    }
     try:
-        response = requests.get(url, headers=headers,proxies=proxies, verify=False)
+        response = requests.get(url, headers=headers, verify=False)
         response.raise_for_status()  # Raise an exception for HTTP errors
         return response.json()
     except requests.exceptions.RequestException as e:
