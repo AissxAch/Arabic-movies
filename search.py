@@ -17,7 +17,7 @@ def search1(a):
     }
     try:
         response = requests.get(url, headers=headers, verify=False)
-        response.raise_for_status()  # Raise an exception for HTTP errors
+        response.raise_for_status()  
         return response.json()
     except requests.exceptions.RequestException as e:
         print(f"Request failed: {e}")
