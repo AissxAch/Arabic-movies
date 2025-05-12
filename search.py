@@ -1,7 +1,6 @@
 import requests,urllib3
 from info import *
 from telebot import *
-import re
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -35,7 +34,7 @@ def search2(a):
         'if-modified-since': "Mon, 23 Dec 2024 21:42:48 GMT",
     }
     try:
-        response = requests.get(url, headers=headers, verify=False)
+        response = requests.get(url, headers=headers,verify=False)
         response.raise_for_status()  # Raise an exception for HTTP errors
         return response.json()
     except requests.exceptions.RequestException as e:
