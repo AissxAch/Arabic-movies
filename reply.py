@@ -4,7 +4,7 @@ from search import *
 
 
 def reply_mg(m):
-    list = search1(m.text)
+    list = search1(m.text.strip())
     for poster in list['posters']:
         keyboard = types.InlineKeyboardMarkup()
         i = 1
